@@ -17,6 +17,6 @@ namespace MonthlyPaymentCalculator.Models
         [Required(ErrorMessage = "Please enter a number of years.")]
         [Range(1, 7, ErrorMessage = "Number of years must be between 1 and 7.")]
         public int? Years { get; set; }
-        public double? MonthlyPaymentAmount => (InterestRate * PurchasePrice) / (1 - Math.Pow((double)(1 + InterestRate), (double)(Years * 12)));
+        public double MonthlyPaymentAmount => (double)((InterestRate * PurchasePrice) / (1 - Math.Pow((double)(1 + InterestRate), (double)(Years * 12))));
     }
 }
