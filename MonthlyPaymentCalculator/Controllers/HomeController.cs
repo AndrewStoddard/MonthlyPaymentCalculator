@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MonthlyPaymentCalculator.Controllers
 {
-    public class MonthlyPaymentController : Controller
+    public class HomeController : Controller
     {
         [HttpGet]
         public IActionResult Index()
