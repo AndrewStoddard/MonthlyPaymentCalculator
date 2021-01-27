@@ -17,7 +17,7 @@ namespace MonthlyPaymentCalculator.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(MonthlyPayment monthlyPayment)
+        public IActionResult Index(MonthlyPaymentModel monthlyPayment)
         {
             if (ModelState.IsValid)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonthlyPaymentCalculator.Models
 {
-    public class MonthlyPayment
+    public class MonthlyPaymentModel
     {
         [Required(ErrorMessage = "Please enter a purchase price.")]
         [Range(1, Double.MaxValue, ErrorMessage = "Purchase Price must be greater than 0.")]
