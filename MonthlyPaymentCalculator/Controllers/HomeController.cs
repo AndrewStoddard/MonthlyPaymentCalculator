@@ -12,7 +12,7 @@ namespace MonthlyPaymentCalculator.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.MonthlyPayment = "";
+            ViewBag.MonthlyPayment = 0.ToString("c2");
             return View();
         }
 
@@ -21,10 +21,10 @@ namespace MonthlyPaymentCalculator.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.MonthlyPayment = monthlyPayment.MonthlyPaymentAmount.ToString("c2");
+                ViewBag.MonthlyPayment = monthlyPayment.MonthlyPaymentAmount().ToString("c2");
             } else
             {
-                ViewBag.MonthlyPayment = "";
+                ViewBag.MonthlyPayment = 0.ToString("c2");
             }
             return View();
         }
