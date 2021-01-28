@@ -52,7 +52,7 @@ namespace MonthlyPaymentCalculator.Models
         public double MonthlyPaymentAmount()
         {
             double result = 0.0;
-            double r = ((double)(InterestRate / 100));
+            double r = ((double)(InterestRate / 12 / 100));
             double n = (double)(Years * 12);
            
             result = (double)(r * PurchasePrice);
